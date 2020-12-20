@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	body{
+		overflow: hidden;
+	}
+	.box1{
+		width: 174px;
+		height: 126px;
+		margin: 100px 30px;
+		background: url(images/fish8.png) left top;
+		animation: motion 3s steps(8) infinite;
+	}
+	@keyframes motion{
+		0%{
+			
+            
+		}
+		25%{
+			
+			transform: translateX(550px) rotateZ(145deg);
+ 		}
+ 		/*灯笼鱼被鲨鱼吃进肚子了，所以从右往左跟着鲨鱼移动*/
+ 		75%{
+ 			transform:translateY(200px);
+ 		}
+		100%{
+			background-position: left -1006px;
+			
+		}
+	}
+
+	.box2{
+		width: 509px;
+		height: 270px;
+		background: url(images/shark1.png) left top;
+		animation: move 6s steps(8) infinite;
+		position: absolute;
+		top: 300px;
+		left: -509px;
+	}
+	@keyframes move{
+		0%{
+
+		}
+		25%{
+			transform: translateX(800px) translateY(-200px)  ;
+		}
+		/*鲨鱼吃掉灯笼鱼就变大*/
+		50%{
+            transform: rotate(-45deg) scale(2);
+		}
+		75%{
+			transform: scale(0);
+		}
+		100%{
+			background-position: left -2160px;
+		}
+	}
+</style>
+
+</head>
+<body>
+
+<div class="box1"></div>
+<div class="box2"></div>
+
+</body>
+</html>
